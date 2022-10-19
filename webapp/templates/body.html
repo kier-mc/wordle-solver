@@ -1,0 +1,126 @@
+{% extends "main.html" %}{% block content %}
+<div id="wrapper-wordle">
+	<form id="form-known-letters">
+		<div class="wrapper-letters">
+			<div class="row flex-center">
+				<h2>Known Letters</h2>
+			</div>
+			<div class="row">
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="k_00" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="k_01" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="k_02" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="k_03" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="k_04" />
+				</div>
+			</div>
+		</div>
+	</form>
+	<form id="form-valid-letters">
+		<div class="wrapper-letters">
+			<div class="row flex-center">
+				<h2>Valid Letters</h2>
+			</div>
+			<div class="row">
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="v_00" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="v_01" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="v_02" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="v_03" />
+				</div>
+				<div class="col-6 margin">
+					<input class="square letter" type="text" maxlength="1" name="v_04" />
+				</div>
+			</div>
+		</div>
+	</form>
+	<form id="form-wrong-letters">
+		<div class="wrapper-letters">
+			<div class="row flex-center">
+				<h2>Invalid Letters</h2>
+			</div>
+			<div class="row">
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_00" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_01" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_02" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_03" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_04" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_05" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_06" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_07" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_08" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_09" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_10" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_11" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_12" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_13" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_14" />
+				</div>
+				<div class="col-8 margin">
+					<input class="square letter" type="text" maxlength="1" name="w_15" />
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="row flex-center">
+		<div class="col-2" style="text-align: right; padding-right: 0.25rem">
+			<button class="btn" onclick="ajax()">Submit</button>
+		</div>
+		<div class="col-2" style="text-align: left; padding-left: 0.25rem">
+			<button class="btn" onclick="clearForm()">Clear</button>
+		</div>
+	</div>
+	<div id="wrapper-results">
+		<div id="results-header">
+			<h3>Results</h3>
+			<span id="counter"></span>
+		</div>
+		<div id="results">Press submit to generate results</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+	"singleQuote": false,
+	"semi": true,
+	"singleAttributePerLine": false,
+	"bracketSameLine": true,
+	"printWidth": 100
+}
